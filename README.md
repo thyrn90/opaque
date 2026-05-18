@@ -94,7 +94,7 @@ int main() {
 }
 ```
 
-Mutation (Critical Developer Steps)
+## Mutation (Critical Developer Steps)
 Do NOT use Opaque out of the box for production without modifying the core signatures. If you use the public unmodified version, reverse engineers will quickly create automatic unpackers for it.
 
 Open opaque.hpp and modify the following before compiling your release build:
@@ -105,7 +105,7 @@ Re-encrypt Strings: If you change the internal byte-array decryption keys (e.g.,
 
 Modify the VCPU ISA: Change the hex values in the _OPCODES enum and shuffle the _BYTECODE array. This creates a unique Instruction Set Architecture specifically for your app, rendering generic static analysis useless.
 
-⚠️ Disclaimer
+## ⚠️ Disclaimer
 This project is provided for educational purposes, authorized security research, and IP protection for independent developers. The author (thyrn90) is not responsible for any system crashes (BSOD), hardware freezes, data loss, or misuse of this software. By using Opaque, you acknowledge that it performs intentional access violations, deep memory modifications, and aggressive memory allocations by design.
 
 ---
@@ -120,5 +120,5 @@ If you have a dedicated reverse-engineering lab, I invite you to put Opaque to t
 
 ---
 
-⚖️ License
+## ⚖️ License
 This project is licensed under the MIT License - see the LICENSE file for details.

@@ -108,5 +108,17 @@ Modify the VCPU ISA: Change the hex values in the _OPCODES enum and shuffle the 
 ⚠️ Disclaimer
 This project is provided for educational purposes, authorized security research, and IP protection for independent developers. The author (thyrn90) is not responsible for any system crashes (BSOD), hardware freezes, data loss, or misuse of this software. By using Opaque, you acknowledge that it performs intentional access violations, deep memory modifications, and aggressive memory allocations by design.
 
+---
+
+## 🧪 Testing Status & Call for Contributors
+
+Opaque has been extensively tested and proven lethal against User-Mode (Ring-3) debuggers, memory dumpers, and standard analysis tools (x64dbg, Ghidra, ScyllaHide) on bare-metal Windows environments.
+
+**Note on Advanced VMs & Hypervisors:** While the core logic for VM/Hypervisor detection (CPUID, timing checks) is implemented, it has not been heavily stress-tested against deep Ring-0 evasion tools like **HyperHide** or custom nested malware analysis labs. 
+
+If you have a dedicated reverse-engineering lab, I invite you to put Opaque to the test. Fork the repo, test the VM fingerprinting limits, and feel free to open an Issue or Pull Request. Let's make this shield unbreakable together.
+
+---
+
 ⚖️ License
 This project is licensed under the MIT License - see the LICENSE file for details.

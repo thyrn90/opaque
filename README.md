@@ -29,7 +29,7 @@ It does not rely on standard API calls, and it does not play nice. Opaque builds
 
 ## 📸 Visual Proof (The Meltdown Sequence)
 
-Opaque does not play nice with debuggers. When it detects an active analysis session, it initiates a total meltdown. Here is the step-by-step destruction of an x64dbg session (running on a Turkish Windows environment to honor its origin 🇹🇷).
+Opaque does not play nice with debuggers. When it detects an active analysis session, it initiates a total meltdown. Here is the step-by-step destruction of an x64dbg session.
 
 ### 1. The Trap Springs (Exception Triggered)
 The moment Opaque detects the debugger, it forces a breakpoint exception to seize control.

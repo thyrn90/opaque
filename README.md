@@ -11,6 +11,8 @@ Opaque is a highly aggressive, header-only C++ defense mechanism designed to pro
 
 It does not rely on standard API calls, and it does not play nice. Opaque builds its own execution environment, masks its core logic through a custom bytecode interpreter, and actively punishes analysis attempts by melting down the tools trying to read it.
 
+> ⚠️ **DISCLAIMER:** This project is provided for educational purposes, authorized security research, and IP protection for independent developers. The author (thyrn90) is not responsible for any system crashes (BSOD), hardware freezes, data loss, or misuse of this software. By using Opaque, you acknowledge that it performs intentional access violations, deep memory modifications, and aggressive memory allocations by design.
+
 ---
 
 ## ⚙️ The Arsenal (Features)
@@ -104,9 +106,6 @@ Change the XOR_KEY: Replace the default 0x7381 with your own unique hex key.
 Re-encrypt Strings: If you change the internal byte-array decryption keys (e.g., char k = 0x13;), you must manually XOR your target strings (kernel32.dll, VirtualAlloc, etc.) with your new key and update the hex arrays in the code.
 
 Modify the VCPU ISA: Change the hex values in the _OPCODES enum and shuffle the _BYTECODE array. This creates a unique Instruction Set Architecture specifically for your app, rendering generic static analysis useless.
-
-## ⚠️ Disclaimer
-This project is provided for educational purposes, authorized security research, and IP protection for independent developers. The author (thyrn90) is not responsible for any system crashes (BSOD), hardware freezes, data loss, or misuse of this software. By using Opaque, you acknowledge that it performs intentional access violations, deep memory modifications, and aggressive memory allocations by design.
 
 ---
 

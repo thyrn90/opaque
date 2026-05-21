@@ -119,7 +119,7 @@ If you have a dedicated reverse-engineering lab, I invite you to put Opaque to t
 
 * **Note on Game Engine Integration:** Opaque is currently an experimental Proof of Concept (PoC) tested primarily on standalone C++ binaries. Integrating this directly into heavy commercial engines (Unity/Unreal) may conflict with their built-in Crash Reporters or cause VCPU performance overhead. It is strongly recommended to initialize Opaque outside of active rendering loops.
 * 
-* * **Note on Desktop/UI Applications:** While Opaque runs flawlessly with near-zero overhead on standard, native C++ desktop applications, caution is advised for modern UI frameworks. Integrating Opaque into multi-process architectures (like Electron/CEF) or strictly sandboxed environments (like Windows UWP) may break Inter-Process Communication (IPC) or conflict with internal JIT memory managers due to its aggressive header wiping and memory manipulation.
+* **Note on Desktop/UI Applications:** While Opaque runs flawlessly with near-zero overhead on standard, native C++ desktop applications, caution is advised for modern UI frameworks. Integrating Opaque into multi-process architectures (like Electron/CEF) or strictly sandboxed environments (like Windows UWP) may break Inter-Process Communication (IPC) or conflict with internal JIT memory managers due to its aggressive header wiping and memory manipulation.
 ---
 
 ## ⚖️ License
